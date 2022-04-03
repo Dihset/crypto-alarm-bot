@@ -1,0 +1,1 @@
+poetry run python -m gunicorn src.app:init_app --bind localhost:8000 --worker-class aiohttp.GunicornWebWorker
