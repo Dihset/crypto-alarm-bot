@@ -1,4 +1,5 @@
-from aiogram import Bot, types, Dispatcher
+from aiogram import Bot, Dispatcher, types
+
 from src.core.config import settings
 
 
