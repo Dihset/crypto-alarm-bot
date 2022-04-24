@@ -18,6 +18,12 @@ format:
 	poetry run python -m isort ./
 	poetry run black --fast ./
 
+migrate:
+	poetry run python -m alembic upgrade head
+
+makemigration:
+	poetry run python -m alembic revision --autogenerate
+
 # docker-compoe
 up-storages:
 	${DC} -f ${STORES} up -d

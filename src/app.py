@@ -1,3 +1,5 @@
+import logging
+
 from aiohttp import web
 
 from src.bot import TelegramWebhookView, init_dispatcher
@@ -12,6 +14,8 @@ async def handle(request):
 
 async def init_app() -> web.Application:
     app = web.Application()
+    logging.basicConfig(level=logging.DEBUG)
+
     app["BOT_DISPATCHER"] = await init_dispatcher()
 
     app.router.add_route("GET", "/", handle)
