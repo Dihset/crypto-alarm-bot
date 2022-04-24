@@ -1,0 +1,27 @@
+version: "3.5"
+
+
+services:
+  #================================
+  #      POSTGRESQL DATABASE
+  #================================
+  crypto-alarm-postgresql:
+    container_name: crypto-alarm-postgresql
+    image: postgres:alpine
+    hostname: crypto-alarm-postgresql
+    volumes:
+      - ../.data/crypto-alarm-postgresql:/var/lib/postgresql/data/
+    env_file:
+      - ../.env
+    networks:
+      - crypto-alarm-network
+    restart: always
+
+
+#================================
+#         NETWORK
+#================================
+networks:
+  crypto-alarm-network:
+    external:
+      name: crypto-alarm-network

@@ -26,7 +26,7 @@
         "ryanluker.vscode-coverage-gutters"
     ],
     "runArgs": [
-        //"--network=country-django-graphql-example-network"
+        "--network=crypto-alarm-network"
     ],
     "postCreateCommand": "poetry install",
     "forwardPorts": [8000],
