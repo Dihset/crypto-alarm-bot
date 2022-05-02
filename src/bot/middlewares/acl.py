@@ -1,8 +1,8 @@
 from aiogram import types
 from aiogram.dispatcher.middlewares import BaseMiddleware
 
-from src.database.connection import sessionmaker
-from src.database.repositories import users
+from src.gateways.database.connection import sessionmaker
+from src.gateways.database.repositories import users
 
 
 class ACLMiddleware(BaseMiddleware):

@@ -35,4 +35,4 @@ up-all:
 	${DC} -f ${STORES} -f ${MONITORING} -f ${APP} up -d
 
 stop-all:
-	${DC} -f ${STORES} -f ${MONITORING} -f ${APP} stop
+	${DC} -f ${STORES} -f ${MONITORING} stop
